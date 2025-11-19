@@ -37,10 +37,22 @@ Diff = A ⊕ B ⊕ Bin
 Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
+Full add
+![WhatsApp Image 2025-11-19 at 11 34 35_46047c98](https://github.com/user-attachments/assets/513e2af9-d730-41ab-a760-30d33ce5ad58)
+
+Full Sub
+![WhatsApp Image 2025-11-19 at 11 35 14_6fdd929d](https://github.com/user-attachments/assets/7d268bc3-fd1a-4a4f-9d96-415610d488e9)
 
 **Procedure**
+Type the program in Quartus software.
 
-Write the detailed procedure here
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
+5.For different input combinations generate the timing diagram.
 
 **Program:**
 Full add
@@ -54,12 +66,20 @@ endmodule
 ```
 Full sub
 ```
+module exp2(a,b,bin,dif,bout);
+input a,b,bin;
+output dif,bout;
+assign dif=a^b^bin;
+assign bout=(a&b)|(bin&(a^b));
+endmodule
 ```
 **RTL Schematic**
 full add
 <img width="1920" height="1080" alt="exp 4 add rtl" src="https://github.com/user-attachments/assets/a7f730eb-ed80-4f56-9416-a7e42761f72f" />
 
 full sub
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f17bf3f7-4c81-42f1-aeed-3ab35ef2d4ef" />
+
 
 
 **Output Timing Waveform**
@@ -67,6 +87,7 @@ Full add
 ![exp 4 add out](https://github.com/user-attachments/assets/4e8f5ff7-60a3-4280-85c5-b2f3affee3e3)
 
 Full sub
+![exp 4 sub out](https://github.com/user-attachments/assets/7dd81a7f-8bec-400e-8922-7f85656f7a89)
 
 
 **Result:**
